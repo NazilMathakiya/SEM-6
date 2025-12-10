@@ -1,0 +1,30 @@
+<!-- WAP to add and remove items from a shopping cart using array methods.(A) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        let shoppingCart = [];
+
+        function displayCart() {
+            document.write("Shopping Cart Items: " + shoppingCart.join(", ") + "<br>");
+        }
+
+        // Adding items to the cart
+        shoppingCart.push("Apple");
+        shoppingCart.push("Banana");
+        shoppingCart.push("Orange");
+        document.write("After adding items:<br>");
+        displayCart();
+
+        // Removing an item from the cart
+        let removedItem = shoppingCart.splice(shoppingCart.indexOf("Banana"), 1);
+        document.write("After removing " + removedItem + ":<br>");
+        displayCart();
+    </script>
+</body>
+</html>

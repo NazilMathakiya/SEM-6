@@ -1,0 +1,23 @@
+<!-- WAP to display string length, uppercase and lowercase versions of an input string.(A) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    <br>
+    <script>
+        let inputString = prompt("Enter a string:");
+        let stringLength = inputString.length;
+        let upperCaseString = inputString.toUpperCase();
+        let lowerCaseString = inputString.toLowerCase();
+
+        document.write("Original String: " + inputString + "<br>");
+        document.write("String Length: " + stringLength + "<br>");
+        document.write("Uppercase: " + upperCaseString + "<br>");
+        document.write("Lowercase: " + lowerCaseString + "<br>");
+    </script>
+</body>
+</html>

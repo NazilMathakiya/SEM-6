@@ -1,0 +1,26 @@
+<!-- WAP to sort an array of student marks and display the highest and lowest marks.(B) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        let studentMarks = [85, 42, 78, 90, 66, 55, 99, 73];
+
+        // Sorting the array in ascending order
+        studentMarks.sort(function(a, b) {
+            return a - b;
+        });
+
+        let lowestMark = studentMarks[0];
+        let highestMark = studentMarks[studentMarks.length - 1];
+
+        document.write("Sorted Marks: " + studentMarks.join(", ") + "<br>");
+        document.write("Lowest Mark: " + lowestMark + "<br>");
+        document.write("Highest Mark: " + highestMark + "<br>");
+    </script>
+</body>
+</html>

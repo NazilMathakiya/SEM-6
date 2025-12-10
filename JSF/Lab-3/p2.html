@@ -1,0 +1,18 @@
+<!-- WAP to count the number of words in a given sentence.(B) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        let inputSentence = prompt("Enter a sentence:");
+        let wordCount = inputSentence.trim().split(/\s+/).length;
+
+        document.write("Original Sentence: " + inputSentence + "<br>");
+        document.write("Word Count: " + wordCount + "<br>");
+    </script>
+</body>
+</html>

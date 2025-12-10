@@ -1,0 +1,21 @@
+<!-- // WAP in JavaScript that accepts a number as input and prints its multiplication table.(A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt("Enter a number: "));
+        let ans=1;
+        for(let i=1;i<=10;i++)
+        {
+            ans=n*i;
+            console.log(`${n} * ${i} = ${ans}`);
+            document.write(`${n} * ${i} = ${ans}<br>`);
+        }
+    </script>
+</body>
+</html>

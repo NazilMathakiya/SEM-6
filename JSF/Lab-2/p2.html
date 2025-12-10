@@ -1,0 +1,22 @@
+<!-- //WAP to calculate factorial of a given number using a for or while loop.(B) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    <br>
+    <script>
+        let num=parseInt(prompt("Enter a number: "));
+        let factorial=1;
+        for(let i=1;i<=num;i++)
+        {
+            factorial=factorial*i;
+        }
+        console.log(`Factorial of ${num} is ${factorial}`);
+        document.write(`Factorial of ${num} is ${factorial}`);
+    </script>
+</body>
+</html>

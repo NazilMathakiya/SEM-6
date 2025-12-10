@@ -1,0 +1,24 @@
+ <!-- WAP to check if a given string is a palindrome(reads the same forwards and backwards).(C) -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+ </head>
+ <body>
+    <script>    
+        let inputString = prompt("Enter a string:");
+        let cleanedString = inputString.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+        let reversedString = cleanedString.split('').reverse().join('');
+        let isPalindrome = cleanedString === reversedString;
+
+        document.write("Original String: " + inputString + "<br>");
+        if (isPalindrome) {
+            document.write("The string is a palindrome.<br>");
+        } else {
+            document.write("The string is not a palindrome.<br>");
+        }
+    </script>
+ </body>
+ </html>
