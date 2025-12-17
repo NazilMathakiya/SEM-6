@@ -1,0 +1,44 @@
+ <!-- WAP to create a simple image gallery slider with next and previous buttons. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+<div>
+    <img id="galleryImage" src="./img1.jpg" alt="Image Gallery" width="500" height="300">
+    <br>
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+</div>
+
+    <script>
+        let images = [
+            './img1.jpg',
+            './img2.jpg',
+            './img3.jpg',
+        ];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            document.getElementById('galleryImage').src = images[index];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        window.onload = function() {
+            showImage(currentIndex);
+        };
+    </script>
+</body>
+</html>
