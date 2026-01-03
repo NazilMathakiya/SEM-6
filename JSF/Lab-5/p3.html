@@ -1,0 +1,72 @@
+<!-- WAP to validate registration form fields and show error message dynamically as the user types.(C) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>5.3</title>
+    <style>
+        .input {
+            align-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(33, 97, 33);
+        }
+        .button {
+            background-color: rgb(137, 100, 27);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: rgb(227, 187, 40);
+        }
+        h1 {
+            color: rgb(19, 71, 19);
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form:-</h1>
+    <div id="email" class="input">Email:-</div>
+    <input type="text" id="emailid" placeholder="Enter your email"><br><br>
+    <div id="mobileno" class="input">Contact:-</div>
+    <input type="text" id="contact" placeholder="Enter your contact number"><br><br>
+    <div id="Password" class="input">Password:-</div>
+    <input type="password" id="pwd" placeholder="Enter your password"><br><br>
+    <button onclick="validate()" class="button">Submit</button>
+
+    <script>
+        function validate() {
+            var email = document.getElementById("emailid").value;
+            var contact = document.getElementById("contact").value;
+            var address = document.getElementById("addressfield").value;
+            var password = document.getElementById("pwd").value;
+
+            // Email validation regex
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Contact number validation (10 digits)
+            var contactPattern = /^\d{10}$/;
+            if (!contactPattern.test(contact)) {
+                alert("Please enter a valid 10-digit contact number.");
+                return false;
+            }
+
+            // Password length validation
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</body>
+</html>

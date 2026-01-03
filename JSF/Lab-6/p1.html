@@ -1,0 +1,25 @@
+<!-- WAP to display the current date and time, updating every second using setInterval().(A) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>6.1</title>
+</head>
+<body>
+    
+    <script>
+        function displayDateTime() {
+            var now = new Date();
+            var dateTimeString = now.toLocaleString();
+            document.body.innerHTML = "<h1>Current Date and Time:</h1><h2>" + dateTimeString + "</h2>";
+        }
+
+        // Update the date and time every second
+        setInterval(displayDateTime, 1000);
+
+        // Initial call to display immediately on load
+        displayDateTime();
+    </script>
+</body>
+</html>

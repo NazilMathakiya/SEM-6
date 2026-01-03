@@ -1,0 +1,39 @@
+<!-- WAP that counts and display the number of remaining characters while typing in a textarea.(B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6.2</title>
+  <style>
+    textarea {
+      width: 300px;
+      height: 120px;
+      font-size: 14px;
+    }
+    .counter {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h3>Type your message</h3>
+  <textarea id="message" maxlength="150" oninput="countChars()"></textarea>
+
+  <div class="counter">
+    Remaining characters: <span id="remaining">150</span>
+  </div>
+
+  <script>
+    const maxLength = 150;
+
+    function countChars() {
+      const textLength = document.getElementById("message").value.length;
+      const remaining = maxLength - textLength;
+      document.getElementById("remaining").textContent = remaining;
+    }
+  </script>
+
+</body>
+</html>̥
