@@ -1,0 +1,48 @@
+<!-- WAP to fetch data from an API and display in an HTML table with a search feature.(C) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Table</title>
+</head>
+<body>
+
+<input type="text" id="search" placeholder="Search name" onkeyup="searchData()">
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody id="data"></tbody>
+</table>
+
+<script>
+let users = [];
+
+// Fetch API data
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(res => res.json())
+  .then(data => {
+    users = data;
+    showData(data);
+  });
+
+// Show data in table
+function showData(data) {
+  let rows = "";
+  data.forEach(u => {
+    rows += `<tr>
+               <td>${u.id}</td>
+               <td>${u.name}</td>
+               <td>${u.email}</td>
+             </tr>`;
+  });
+  document.getElementById("data").innerHTML = rows;
+}
+</script>
+
+</body>
+</html>

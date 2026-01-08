@@ -1,0 +1,21 @@
+<!-- WAP to fetch user data from a dummy REST API(JSONPlaceholder) and display it.(B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7.2</title>
+</head>
+<body>
+    <button id="fetchButton">Fetch Data</button>
+    <pre id="output"></pre>
+    <script>
+            document.getElementById('fetchButton').addEventListener('click', function() {
+            fetch('https://jsonplaceholder.typicode.com/users').then(response => response.json()).then(jsonData => {
+                    console.log(jsonData);
+                    document.getElementById('output').textContent = JSON.stringify(jsonData);
+                });
+            });
+    </script>
+</body>
+</html>
