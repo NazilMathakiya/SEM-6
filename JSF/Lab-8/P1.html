@@ -1,0 +1,24 @@
+<!-- Write a program that uses arrow functions and template literals to display personalized greetings. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Greetings</title>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="greetButton"> Submit</button>
+    <p id="greetingMessage"></p>
+
+    <script>
+        const greetUser = () => {
+            const name = document.getElementById('nameInput').value;
+            const greetingMessage = `Hello, ${name}`;
+            document.getElementById('greetingMessage').innerText = greetingMessage;
+        };
+
+        document.getElementById('greetButton').addEventListener('click', greetUser);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Value:
+    <input type="text" id="marks"> 
+    <input type="button" id="button" value="Add" onclick="AddData()">
+    <input type="button" id="button" value="Total Avg" onclick="FindAvg()">
+    <script>
+
+        let Student = [];
+
+        function AddData()
+        {
+            StudentMarks.push(
+                parseInt(document.getElementById('name').value)
+            );
+            document.getElementById('name').value = '';
+        }
+        function FindAvg()
+        {
+            let sum = StudentMarks.reduce((total , mark)=>{
+                return total+=mark
+            },0)
+            let avg = sum/StudentMarks.length
+            document.write(avg);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- Write a program to mark tasks as completed in a to-do list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devsice-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter Data:</label>
+    <input type="text"  id="task">
+    <button id="button" onclick="AddData()">Add</button>
+    <ul id="ui_Task">
+
+    </ul>
+    <script>
+        function AddData()
+        {
+           let tasktext=document.getElementById('task');
+           let new_task=document.getElementById('ui_Task');
+           let task = tasktext.value;
+           console.log(task);
+
+            let li=document.createElement('li');
+            li.textContent=task;
+            new_task.appendChild(li);
+            tasktext.value='';
+        }
+    </script>
+</body>
+</html>
